@@ -9,11 +9,11 @@ body{
 }
 
 .header{
-    height: 90vh;
+    height: 80vh;
     background-image: url("../images/apple-pie.jpg");
     background-position:center; 
     background-repeat: no-repeat;
-    background-size:cover;
+    background-size:cover; 
     display: flex;
     justify-content: center;
     align-items: center;
@@ -23,6 +23,11 @@ header h1{
     color: #ffffff;
     font-size: 6em;
     font-weight: 100;
+}
+
+.line{
+    border-radius: 50px;
+    background-color: #000;
 }
 /* -----------sections---------- */
 section{
@@ -62,12 +67,13 @@ section h3{
 /* -----------section 2 ---------- */
 .ingredients ul{
     margin-left: 20px;
-    list-style: none;
+    list-style: none; 
     font-size: 1.1em;
+
 }
 
 .ingredients ul li:before { 
-    content: '-'; 
+    content: '-';  
     margin-left: -20px; 
     margin-right: 5px; 
 } 
@@ -91,4 +97,18 @@ section h3{
 
 .directions{
     margin-bottom: 100px;
+}
+
+.directions ol{
+    list-style: none;
+}
+  
+.directions ol li{
+    counter-increment: listCounter;
+    margin-bottom: .5rem;
+}
+
+.directions ol li::before {
+    content: counter(listCounter) ")";
+    margin-right: 6px;
 }
